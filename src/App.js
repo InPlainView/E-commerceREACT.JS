@@ -1,11 +1,15 @@
-import './App.css';
-import Navbar from './components/NavBar';
+import Navbar from "./components/Navbar/NavBar";
+import ItemListContainer from "./ItemListContainer/itemlist";
+
 
 function App() {
     
     
     return(
-        <Navbar/>
+       <div>
+         <Navbar/>
+        <ItemListContainer greeting={"Aca van cositas"}/>
+       </div>
     )
 }
 

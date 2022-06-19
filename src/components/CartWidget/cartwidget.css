@@ -1,0 +1,8 @@
+.cart {
+    display: inline-flex;
+    float: right;
+    padding: auto;
+    margin: 10px;
+    margin-right: 20px;
+    color: #333;
+}
