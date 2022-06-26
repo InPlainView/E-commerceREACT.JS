@@ -1,0 +1,29 @@
+
+
+.countbox {
+    display: inline-flex;
+    width: 140px;
+    height: 25px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #c50;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+.countNumber {
+    display: inline-block;
+    color: #c50;
+}
+
+button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+button:active {
+    color: #c30;
+}

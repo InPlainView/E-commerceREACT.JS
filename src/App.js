@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar/NavBar";
 import ItemListContainer from "./ItemListContainer/itemlist";
-
+import ClickCounter from "./components/ClickCounter/click";
 
 function App() {
     
@@ -9,6 +9,7 @@ function App() {
        <div>
          <Navbar/>
         <ItemListContainer greeting={"Aca van cositas"}/>
+        <ClickCounter/>
        </div>
     )
 }
