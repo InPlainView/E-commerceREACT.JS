@@ -9,11 +9,12 @@ ul {
     padding: 0;
 }
 
-li {
+.linavbar li {
     margin-top: 14px;
     margin-right: 5px;
     float: right;
     border-right: 2px solid #999;
+    list-style-type: none;
 }
 
 li a {
@@ -39,3 +40,20 @@ li a:hover {
     text-shadow: 3px 2px 10px #000;
     margin-left: 10px;
 }
+
+p a {
+    font-family: fantasy;
+    background-color: transparent;
+    font-size: 40px;
+    color: #F77202 ;
+    display: inline-block;
+    margin: 0;
+    text-shadow: 3px 2px 10px #000;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+/* Link {
+    text-decoration: none;
+    color: #F77202;
+} */

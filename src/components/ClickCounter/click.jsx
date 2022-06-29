@@ -3,24 +3,30 @@ import { useState } from 'react'
 import './click.css';
 
 
-function ClickCounter () {
+function ClickCounter ({initial, stock , onAdd}) {
 
-const [count, setCount] = useState(0)
+const [count, setCount] = useState(initial)
 
 const plusCount = () => {
-     setCount (count + 1)
+    if(count < stock) {
+        setCount (count + 1)
+    }
+    
 }
 const minusCount = () => {
-   if (count > 0){
+   if (count > initial){
     setCount (count - 1) 
    } 
 }
 return (
-    <div className="countbox">
-        <button onClick={minusCount} className="plusButton">-</button>
-        <div className="countNumber">{count}</div>
-        <button onClick={plusCount} className="minusButton">+</button>
-    </div> 
+    <div className="allbox">
+        <div className="countbox">
+            <button onClick={minusCount} className="plusButton">-</button>
+            <div className="countNumber">{count}</div>
+            <button onClick={plusCount} className="minusButton">+</button>
+        </div>
+        <button className="addCart" >Add</button>
+    </div>
 )
 
 }

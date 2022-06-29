@@ -1,15 +1,25 @@
 import Navbar from "./components/Navbar/NavBar";
-import ItemListContainer from "./ItemListContainer/itemlist";
-import ClickCounter from "./components/ClickCounter/click";
+import ItemListContainer from "./ItemListContainer/itemListContainer";
+import {BrowserRouter , Routes , Route} from 'react-router-dom'
+import Notfound from "./components/NotFound/Notfound";
 
 function App() {
     
     
     return(
        <div>
-         <Navbar/>
-        <ItemListContainer greeting={"Aca van cositas"}/>
-        <ClickCounter/>
+        <BrowserRouter>
+        <Navbar>
+            <Routes>
+              <Route path="/" element={<ItemListContainer/>}></Route> 
+              <Route path="/category/:categoryId" element={<ItemListContainer/>}></Route> 
+              <Route path="/detail/:productId" element={<ItemListContainer/>}></Route> 
+              <Route path="*" element={<Notfound/>}></Route> 
+            </Routes>
+        </Navbar>
+        <ItemListContainer/>
+        </BrowserRouter>
+         
        </div>
     )
 }
