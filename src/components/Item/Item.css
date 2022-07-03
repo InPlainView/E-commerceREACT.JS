@@ -1,8 +1,8 @@
 .itemcard {
     position: relative;
     display: inline-block;
-    width: 150px;
-    height: 210px;
+    width: 210px;
+    height: 237px;
     background-color: #E1D4A7;
     border: 1.5px solid #333;
     color: #000;
@@ -24,16 +24,18 @@
 } */
 
 .itemcard h3{
-    width: 145px;
+    width: 200px;
     height: 10px;
     margin: 5px;
-    margin-left: 0;
+    font-size: 16px;
+    margin: auto;
 }
 
 .itemcard img {
-    object-fit: contain;
-    height: 140px;
-    margin-top: 35px;
+    object-fit: cover;
+    height: 155px;
+    width: 180px;
+    margin-top: 56px;
     border-radius: 5px;
 }
 .itemcard:hover img {

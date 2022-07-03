@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar/NavBar";
 import ItemListContainer from "./ItemListContainer/itemListContainer";
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import Notfound from "./components/NotFound/Notfound";
+import ItemDetailContainer from "./ItemListContainer/itemDetailContainer/ItemDetailContainer";
 
 function App() {
     
@@ -17,7 +18,8 @@ function App() {
               <Route path="*" element={<Notfound/>}></Route> 
             </Routes>
         </Navbar>
-        <ItemListContainer/>
+        {/* <ItemListContainer/> */}
+        <ItemDetailContainer/>
         </BrowserRouter>
          
        </div>
