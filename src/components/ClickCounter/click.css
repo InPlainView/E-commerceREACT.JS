@@ -2,10 +2,10 @@
 .allbox {
     display: flex;
     height: 50px;
-    width: 240px;
-    margin-left: 15px;
+    width: 210px;
+    margin-left: -3px;
     margin-bottom: 20px;
-    margin-top: -17px;
+    margin-top: -7px;
 }
 
 .countbox {
@@ -46,12 +46,12 @@ button:active {
     margin: 10px;
     margin-left: 0;
     border-radius: 5px;
-    background-color: #c30;
+    background-color: #F77202;
     color: #fff;
 }
 .addCart:active {
     color:#fff;
-    background-color: #c70;
+    background-color: #c30;
 }
 .addCart:hover {
     cursor: pointer;

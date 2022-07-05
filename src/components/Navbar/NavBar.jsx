@@ -9,10 +9,12 @@ function Navbar() {
         <ul className='linavbar'>
             <p className='logo'><Link to="/">Ubuy</Link></p>
             <CartWidget/>
-            <li className='linavbar'><Link to="/">Home</Link></li>
-            <li className='linavbar'><a href="news.asp">News</a></li>
-            <li className='linavbar'><a href="contact.asp">Contact</a></li>
-            <li ><a href="about.asp">About</a></li>
+            <li className='linkNavbar'><Link to="/">Home</Link></li>
+            <li className='linkNavbar'><Link to="/category/jewelery">Jewelery</Link></li>
+            <li className='linkNavbar'><Link to="/category/electronics">Electronics</Link></li>
+            <li className='linkNavbar'><Link to="/category/men's clothing">Men's clothing</Link></li>
+            <li className='linkNavbar'><Link to="/category/women's clothing">Women's clothing</Link></li>
+            {/* <li ><Link to="">About</Link></li> */}
         </ul>
     )
 }

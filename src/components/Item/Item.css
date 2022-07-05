@@ -1,8 +1,12 @@
+.cardbox{
+    margin-left: 12px;
+}
+
 .itemcard {
     position: relative;
     display: inline-block;
     width: 210px;
-    height: 237px;
+    height: 270px;
     background-color: #E1D4A7;
     border: 1.5px solid #333;
     color: #000;
@@ -17,11 +21,10 @@
     border: 1.5px solid #F77202;
 }
 
-/* .itemcard li {
-    display: inline-block;
-    list-style-type: none;
-    border: none;
-} */
+.cardcount {
+    display: block;
+    margin-top: 30px;
+}
 
 .itemcard h3{
     width: 200px;
@@ -57,9 +60,21 @@
     margin-left: 0px;
     text-align: center;
     border-radius: 5px;
+    text-decoration: none;
+    
+}
+.detailBtn a{
+    margin-left: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
 }
 .detailBtn:hover {
     cursor: pointer;
+}
+.detailBtn:active {
+    background-color: #c30;
+    color: #fff;
 }
 .middle {
     transition: .5s ease;
@@ -72,7 +87,4 @@
 }
 .itemcard:hover .middle {
     opacity: 1;
-  }
-  .cardcount {
-    color: #F77202;
-  }
+}

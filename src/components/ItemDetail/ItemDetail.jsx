@@ -9,7 +9,7 @@ const ItemDetail = ({product}) => {
         <img className='imgbox' src={product.image} alt=""></img>
         <div className='detailbox'>
             <p className='descriptionbox'>{product.description}</p>
-            <p className='pricebox'>Price: {product.price}</p>
+            <p className='pricebox'>Price: ${product.price}</p>
         </div>
     </div>
 

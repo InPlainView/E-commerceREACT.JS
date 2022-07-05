@@ -1,15 +1,15 @@
 import React from 'react';
-// import ClickCounter from '../components/ClickCounter/click';
 import { useEffect , useState } from "react";
-import ItemList from '../components/ItemList/ItemList';
+import { useParams } from 'react-router-dom';
+import ItemList from '../../components/ItemList/ItemList';
 
 
 const ItemListContainer = ({greeting}) => {
     
     const [products , setProducts] = useState([])
+    const [productosFiltrados , setProductosFiltrados] = useState()
 
-   
-        
+    const params = useParams()  
 
         useEffect(() => {
             const getProducts = async() => {
@@ -18,6 +18,7 @@ const ItemListContainer = ({greeting}) => {
                     const data = await response.json();
                     console.log(data);
                     setProducts(data);
+                    setProductosFiltrados(data);
                 } catch (error) {
                     console.log("Hubo un error");
                     console.log(error);
@@ -26,16 +27,24 @@ const ItemListContainer = ({greeting}) => {
             }
             getProducts()
         }, [] )
+        
+        useEffect(() => {
+                if (params?.categoryId){
+                    const productosFiltrados = products.filter(product => product.category === params.categoryId)
+                    setProductosFiltrados(productosFiltrados)
+                } else {
+                    setProductosFiltrados(products)
+                }
+        }, [params , products])
 
         console.log(products)
 
    
  
     return(
-        <div>
+        <div className='divContainer'>
             <h2>{greeting}</h2>
-            {/* <ClickCounter initial={1} stock={20}/> */}
-            <ItemList char={products}/>
+            <ItemList char={productosFiltrados}/>
         </div>
     )
 
