@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import ClickCounter from '../ClickCounter/click'
+// import ClickCounter from '../ClickCounter/click'
 import './Item.css'
 
 const Item = ({prod}) => {
@@ -23,7 +23,7 @@ return(
                  <div className='middle'>
                     <button className='detailBtn' onClick={handleDetail}>Detalles</button>
                  </div>
-                 <ClickCounter className="cardcount" initial={1} stock={20}/>
+                 {/* <ClickCounter className="cardcount" initial={1} stock={20}/> */}
             </div>
         </li>
         

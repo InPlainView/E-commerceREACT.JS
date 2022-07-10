@@ -24,7 +24,7 @@ p {
 }
 .descriptionbox {
     display: inline-block;
-    width: 500px;
+    width: 700px;
     font-size: 20px;
     padding: auto;
     margin-left: 25px;
@@ -34,4 +34,27 @@ p {
     font-size: 40px;
     position: relative;
     margin-left: 150px;
+}
+.btnDiv{
+    display: flex;
+    position:relative;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+}
+.terminateBtn {
+    position: relative;
+    width: 180px;
+    height: 50px;
+    border: 1px solid #F77202;
+    border-radius: 5px;
+    background-color: #F77202;
+    color: #fff;
+}
+.terminateBtn:active{
+    background-color: #c30;
+    color: #fff;
+}
+.terminateBtn:hover{
+    cursor: pointer;
 }
