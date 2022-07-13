@@ -1,0 +1,27 @@
+.liProductosComprados {
+    display: flex;
+   height: 40px;
+   list-style-type: none;
+   padding: auto;
+   margin: 10px;
+   margin-left: -10px;
+   margin-right: 20px;
+   margin-bottom: 15px;
+   box-sizing: border-box;
+   box-shadow: 2px 2px 5px 1.5px;
+}
+.liProductosComprados p{
+    display: flex;
+    margin-top: 8px;
+    font-size: 20px;
+}
+.proCompradoImg {
+    display: inline-block;
+    position: relative;
+    height: 35px;
+    width: 35px;
+    padding-right: 10px;
+    margin-left: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}

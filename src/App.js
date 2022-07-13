@@ -3,15 +3,15 @@ import ItemListContainer from "./Container/itemListContainer/itemListContainer";
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import Notfound from "./components/NotFound/Notfound";
 import ItemDetailContainer from "./Container/itemDetailContainer/ItemDetailContainer";
-import { CartShop } from "./context/cartContext";
 import Cart from "./Container/Cart/cart";
+import CartProvider from "./context/cartProvider";
 
 function App() {
     
     
     return(
        <div>
-        <CartShop.Provider>
+        <CartProvider>
             <BrowserRouter>
             <Navbar/>
              <Routes>
@@ -22,7 +22,7 @@ function App() {
                 <Route path="*" element={<Notfound/>}></Route> 
             </Routes>
             </BrowserRouter>
-        </CartShop.Provider>
+        </CartProvider>
          
        </div>
     )
