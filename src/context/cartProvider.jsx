@@ -19,21 +19,17 @@ const CartProvider = ({children}) => {
       }else{
         setCart([...cart , {...producto , quantity: cantidad}])
       }
-
     }
-    
 
-    const clearAll = (cart) => {
-     setCart(cart.length === [0])
+    const clearAll = () => {
+     setCart([])
     }
-    const removeItem = (producto) => {
-      // const canceledItem = cart.filter((producto) => producto.id !== id)
-      // setCart(canceledItem)
-      const canceledItem = cart.splice(`${producto.id}`)
+  
+    const removeItem = (id) => {
+      const canceledItem = cart.filter((producto) => producto.id !== id)
       setCart(canceledItem)
     }
 
-    
     const isInCart = (producto) => {
       return cart.find(elemento => elemento.id === producto.id)
     }

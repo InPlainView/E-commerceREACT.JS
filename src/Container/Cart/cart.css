@@ -1,13 +1,14 @@
 .liProductosComprados {
     display: flex;
-   height: 40px;
+   min-height: 30px;
+   width: 100%;
    list-style-type: none;
    padding: auto;
    margin: 10px;
    margin-left: -10px;
    margin-right: 20px;
    margin-bottom: 15px;
-   box-sizing: border-box;
+   box-sizing: content-box;
    box-shadow: 2px 2px 5px 1.5px;
 }
 .liProductosComprados p{
@@ -15,13 +16,81 @@
     margin-top: 8px;
     font-size: 20px;
 }
+.titlecontent{
+    width: 80%;
+    height: 40px;
+}
 .proCompradoImg {
     display: inline-block;
     position: relative;
-    height: 35px;
-    width: 35px;
+    height: 55px;
+    width: 55px;
     padding-right: 10px;
     margin-left: 4px;
-    margin-top: 2px;
+    margin-top: 8px;
     margin-bottom: 2px;
+}
+.cancelItem {
+    position: relative;
+    background-color: #F77202;
+    color: #fff;
+    width: 90px;
+    height: 60px;
+    margin-top: 4px;
+    margin-right: 10px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: auto;
+}
+.cancelItem:hover{
+    cursor: pointer;
+    outline: 2.5px solid #555;
+}
+.cancelItem:active {
+    background-color: #c30;
+    color: #fff;
+}
+.clearList{
+    display:block;
+    width: 140px;
+    height: 45px;
+    border: 1px solid #333;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #fc8924;
+    box-shadow: 2px 2px 10px 1.5px;
+}
+.clearList:hover{
+    cursor: pointer;
+}
+.clearList:active{
+    background-color: #c30;
+    color: #000;
+}
+.priceqty{
+    width: 120px;
+    height: 40px;
+    margin-left: auto;
+    position: relative;
+    float: right;
+    justify-content: center;
+    align-items: center;
+}
+.btnGoShop{
+    display: block;
+    width: 200px;
+    height: 60px;
+    background-color: #fc8924;
+    margin: auto;
+    border: 1px solid #333;
+    box-shadow: 2px 2px 10px 1.5px;
+}
+.btnGoShop:hover{
+    cursor: pointer;
+}
+.btnGoShop:active{
+    background-color: #c30;
+    color: #000;
 }

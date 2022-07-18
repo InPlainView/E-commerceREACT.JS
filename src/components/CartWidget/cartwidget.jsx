@@ -7,11 +7,18 @@ import { CartShop } from '../../context/cartProvider';
 function CartWidget() {
 const {cart} = useContext(CartShop)
 
-    return(
+    return(<>
+    {cart.length !==0?
+
         <div className='cart'>
             <div ><FiShoppingCart  size={30}/></div>
             {cart.length && <span>({cart.length})</span>}
         </div>
+    : <></>
+    }
+    
+    
+    </>
     )
 }
     
