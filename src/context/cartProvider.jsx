@@ -5,7 +5,6 @@ export const CartShop = createContext()
 
 const CartProvider = ({children}) => {
 
-    const [estadoCero , setEstadoCero] = useState("Estado cero")
     const [cart , setCart] = useState([])
 
 
@@ -36,7 +35,7 @@ const CartProvider = ({children}) => {
     
 
   return (
-    <CartShop.Provider value={{estadoCero , setEstadoCero, addItem, cart, clearAll, removeItem}}>
+    <CartShop.Provider value={{ addItem, cart, clearAll, removeItem}}>
         {children}
     </CartShop.Provider>
   )

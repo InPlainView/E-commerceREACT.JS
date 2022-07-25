@@ -1,6 +1,5 @@
 import React from 'react'
-import { useContext } from 'react'
-import { useState } from 'react'
+import { useContext , useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CartShop } from '../../context/cartProvider'
 import ClickCounter from '../ClickCounter/click'
@@ -10,7 +9,6 @@ const ItemDetail = ({product}) => {
 
   const navigate = useNavigate()
   const [cantAdded , setCantAdded] = useState(0)
-
   const {addItem} = useContext(CartShop)
 
   const handleAdd = (qty) =>{
@@ -32,7 +30,7 @@ const ItemDetail = ({product}) => {
             <p className='pricebox'>Price: ${product.price}</p>
             <div className='btnDiv'>
                  {!cantAdded ?
-                 <ClickCounter onAdd={handleAdd} initial={1} stock={20}/>
+                 <ClickCounter onAdd={handleAdd} initial={1} stock={product.stock}/>
                  : <button className='terminateBtn' onClick={handleTerminate}>Terminar compra</button>}
         </div>   
         </div>
