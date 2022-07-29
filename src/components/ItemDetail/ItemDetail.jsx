@@ -32,8 +32,7 @@ const ItemDetail = ({product}) => {
                  {!cantAdded ?
                  <ClickCounter onAdd={handleAdd} initial={1} stock={product.stock}/>
                  : <button className='terminateBtn' onClick={handleTerminate}>Terminar compra</button>}
-        </div>   
-        </div>
+        </div></div>
         
     </div>
 

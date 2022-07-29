@@ -9,14 +9,28 @@
     padding: 0;
 }
 
-.linavbar li {
+.linavbar li{
     margin-top: 14px;
     margin-right: 5px;
     float: right;
     border-right: 2px solid #999;
     list-style-type: none;
 }
-
+ button.li{
+    width: 60px;
+    height: 30px;
+    margin-top: 14px;
+    margin-right: 5px;
+    float: right;
+    list-style-type: none;
+}
+button:hover.li{
+    cursor: pointer;
+}
+div.cart{
+    margin: 0;
+    margin-top: -5px;
+}
 .linkNavbar a {
     text-decoration: none;
     text-align: center;

@@ -1,0 +1,13 @@
+form {
+    width: 500px;
+    height: 500px;
+}
+input {
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.errorMsg {
+    color: rgb(221, 12, 12);
+}
