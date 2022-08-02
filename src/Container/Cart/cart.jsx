@@ -1,12 +1,12 @@
-// import { addDoc, collection } from 'firebase/firestore'
-import React from 'react'
-import { useContext} from 'react'
+import React,  { useContext} from 'react'
 import { useNavigate } from 'react-router-dom'
 import ModalUser from '../../components/Modals/modalUser'
 import { CartShop } from '../../context/cartProvider'
+import guardarOrden from '../../utils/guardarOrden'
+import orderCreated from '../../utils/ordenCreada'
+import { useForm } from '../../utils/useForm'
 import { useModal } from '../../utils/useModal'
 import ContactForm from '../DatosUser/datosUser'
-// import { db } from '../../firebase/config'
 import './cart.css'
 
 
@@ -14,10 +14,18 @@ const Cart = () => {
   const {cart , clearAll, removeItem} = useContext(CartShop)
   const [isOpen, openModal , closeModal] = useModal(false)
 
+
   // const confirmOrder = async () => {
-  //   const orden = orderCreated("Pablo", 155489515, "pablo@mail.com", "dakkmsdkasd"  , "cadena", 455, 6556);
+  //   const orden = orderCreated(`"Pablo", 155489515, "pablo@mail.com", "id" , "cadena", 455, 6556`);
   //   guardarOrden(cart, orden)
   // }
+  
+  const confirmOrder = async () => {
+   
+    const orden = orderCreated();
+    console.log(orderCreated)
+    guardarOrden(cart, orden)
+  }
 
  const navigate = useNavigate()
  const handleBackToBuy = ()=>{
@@ -45,7 +53,7 @@ const Cart = () => {
           <ContactForm></ContactForm>
         </ModalUser>
        {<button onClick={openModal}>Confirmar</button>}
-       {/* <button onClick={confirmOrder} className="btnConfirmCompra">Listo!</button> */}
+       <button onClick={confirmOrder} className="btnConfirmCompra">Esto despues!</button>
         <div>Total: ${
           cart.reduce((amount, product) => amount + Math.round(product.price*product.quantity) , 0)
           }</div>

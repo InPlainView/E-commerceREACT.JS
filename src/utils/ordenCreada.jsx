@@ -1,13 +1,13 @@
-const orderCreated = (nombre, phonenumber, email, id, title, price, total) => {
+const orderCreated = (name, phonenumber, email, id, title, price, total) => {
   return {
       buyer: {
-          name: nombre,
-          phone: phonenumber,
+          nombre: name,
+          telefono: phonenumber,
           email: email
       },
       items: {
         id: id,
-        name: title,
+        title: title,
         price: price
       },
       creado: new Date().toLocaleString(),

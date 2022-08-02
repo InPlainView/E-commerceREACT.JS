@@ -4,11 +4,10 @@ import { db } from "../firebase/config"
 
 const guardarOrden = (cart, orden) => {
 
-//primer paso: abrir un batch
     const batch = writeBatch(db)
 
-//Array auxiliar que define si hya productos fuera de stock
     const outOfStock = []
+    
 
 //chequear el stock del producto en nuestra db y restarlo de la cantidad, si corresponde
     cart.forEach((productoEnCart) =>{

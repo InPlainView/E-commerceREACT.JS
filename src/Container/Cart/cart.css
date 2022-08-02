@@ -97,11 +97,11 @@
     background-color: #c30;
     color: #000;
 }
-/* .btnConfirmCompra{
+.btnConfirmCompra{
     display: flex;
     position: relative;
     height:40px;
     width: 80px;
     float: right;
     margin-right: 50px;
-} */
+}

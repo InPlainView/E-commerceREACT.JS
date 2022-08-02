@@ -11,17 +11,17 @@ const ModalUser = ({children, isOpen, closeModal}) => {
 const {cart} = useContext(CartShop)
 // const [openModal, closeModal] = useModal(false)
 
-const confirmOrder = async () => {
-    const orden = orderCreated("Pablo", 155489515, "pablo@mail.com", "dakkmsdkasd"  , "cadena", 455, 6556);
-    guardarOrden(cart, orden)
-    }
+// const confirmOrder = async () => {
+//     const orden = orderCreated("Pablo", 155489515, "pablo@mail.com", "dakkmsdkasd"  , "cadena", 455, 6556);
+//     guardarOrden(cart, orden)
+//     }
 
   return (
     <article className={`modal ${isOpen &&"is-open"}`}>
         <div className='modal-container'>
             <button className='modal-close' onClick={closeModal}>X</button>
             {children}
-            <button onClick={confirmOrder} className="btnConfirmCompra">Listo!</button>
+            {/* <button  className="btnConfirmCompra">Esto primero!</button> */}
         </div>
     </article>
   )
