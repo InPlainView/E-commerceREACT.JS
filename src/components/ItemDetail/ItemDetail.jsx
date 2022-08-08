@@ -1,5 +1,4 @@
-import React from 'react'
-import { useContext , useState} from 'react'
+import React, { useContext , useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CartShop } from '../../context/cartProvider'
 import ClickCounter from '../ClickCounter/click'
@@ -14,13 +13,11 @@ const ItemDetail = ({product}) => {
   const handleAdd = (qty) =>{
     setCantAdded(qty)
   }
-    console.log(cantAdded)
-
   const handleTerminate = () =>{
     addItem(product , cantAdded)
     navigate("/cart")
   }
-  console.log(cantAdded)
+
   return (
     <div className='containbox'>
         <h3 className='titlebox'>{product.title}</h3>

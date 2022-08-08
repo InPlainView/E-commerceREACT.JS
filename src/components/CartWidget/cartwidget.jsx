@@ -1,13 +1,10 @@
-import React from 'react'
-import './cartwidget.css'
 import { FiShoppingCart } from 'react-icons/fi';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { CartShop } from '../../context/cartProvider';
+import './cartwidget.css'
 
 function CartWidget() {
 const {cart} = useContext(CartShop)
-
-
 
     return(<>
     {cart.length !==0?
@@ -18,7 +15,6 @@ const {cart} = useContext(CartShop)
         </div>
     : <></>
     }
-    
     
     </>
     )

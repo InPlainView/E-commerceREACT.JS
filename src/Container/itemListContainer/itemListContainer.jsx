@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect , useState } from "react";
+import React, { useEffect , useState } from "react";
 import { useParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList/ItemList';
 import Loading from '../../components/loading/loading';
@@ -7,12 +6,10 @@ import { collection, query,  getDocs } from "firebase/firestore";
 import { db } from '../../firebase/config';
 
 
-
 const ItemListContainer = ({greeting}) => {
     
     const [products , setProducts] = useState([])
     const [productosFiltrados , setProductosFiltrados] = useState()
-
     const params = useParams()  
 
         useEffect(() => {
@@ -23,19 +20,12 @@ const ItemListContainer = ({greeting}) => {
                     const productos =[]
                     querySnapshot.forEach((doc) => {
                     // doc.data() is never undefined for query doc snapshots
-                    console.log(doc.id, " => ", doc.data());
                     productos.push({id: doc.id, ...doc.data()})
                     });
 
-                    // const response = await fetch('https://fakestoreapi.com/products');
-                    // const data = await response.json();
                     setProducts(productos);
                     setProductosFiltrados(productos);
-                } catch (error) {
-                    console.log("Hubo un error");
-                    console.log(error);
-                }
-               
+                } catch (error) {}
             }
             getProducts()
         }, [] )
@@ -49,10 +39,6 @@ const ItemListContainer = ({greeting}) => {
                 }
         }, [params , products])
 
-        console.log(products)
-
-   
- 
     return(
         <div className='divContainer'>
             {
@@ -62,7 +48,6 @@ const ItemListContainer = ({greeting}) => {
             }
         </div>
     )
-
 }
 
 export default ItemListContainer

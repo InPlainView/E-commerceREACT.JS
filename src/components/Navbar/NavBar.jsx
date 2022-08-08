@@ -6,19 +6,19 @@ import './NavBar.css';
 
 function Navbar() {
 const navigate = useNavigate()
-    const handleGoCart = () =>{
-    navigate("/cart")
-    }
+const handleGoCart = () =>{
+navigate("/cart")
+}
     return(
         <ul className='linavbar'>
-            <p className='logo'><Link to="/">Ubuy</Link></p>
-            {/* <CartWidget/> */}
+            <p className='logo'><Link to="/">U-buy</Link></p>
             <button onClick={handleGoCart} className="li"><CartWidget/></button>
-            <li className='linkNavbar'><Link to="/">Home</Link></li>
             <li className='linkNavbar'><Link to="/category/jewelery">Jewelery</Link></li>
             <li className='linkNavbar'><Link to="/category/electronics">Electronics</Link></li>
             <li className='linkNavbar'><Link to="/category/men's clothing">Men's clothing</Link></li>
             <li className='linkNavbar'><Link to="/category/women's clothing">Women's clothing</Link></li>
+            <li className='linkNavbar'><Link to="/products">Products</Link></li>
+            <li className='linkNavbar'><Link to="/">Home</Link></li>
         </ul>
     )
 }

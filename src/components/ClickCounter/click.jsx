@@ -1,10 +1,8 @@
-import React from "react";
-import { useState } from 'react'
+import React, { useState } from 'react'
 import './click.css';
 
 
 function ClickCounter ({ initial, stock, onAdd }) {
-
 const [count, setCount] = useState(initial)
 
 const handleAdd = () =>{
@@ -12,12 +10,10 @@ if (count <= stock){
     onAdd(count);
 }
 }
-
 const plusCount = () => {
     if(count < stock) {
         setCount (count + 1)
     }
-    
 }
 const minusCount = () => {
    if (count > initial){

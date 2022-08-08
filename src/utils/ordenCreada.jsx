@@ -1,19 +1,13 @@
-const orderCreated = (name, phonenumber, email, id, title, price, total) => {
+const orderCreated = (buyer, cart, total) => {
   return {
       buyer: {
-          nombre: name,
-          telefono: phonenumber,
-          email: email
+          nombre: buyer.names,
+          phone: buyer.phone,
+          email: buyer.email
       },
-      items: {
-        id: id,
-        title: title,
-        price: price
-      },
+      items: cart,
+      total: total,
       creado: new Date().toLocaleString(),
-        total: total
   }
-  
 }
-
 export default orderCreated

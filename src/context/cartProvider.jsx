@@ -1,5 +1,4 @@
-import React, { createContext } from 'react'
-import { useState } from 'react'
+import React, { createContext , useState} from 'react'
 
 export const CartShop = createContext()
 
@@ -9,6 +8,7 @@ const CartProvider = ({children}) => {
   const [totalPrice , setTotalPrice] = useState(0)
   const [totalQuantities , setTotalQuantities] = useState(0)
   
+  const total = cart.reduce((amount, product) => amount + Math.round(product.price*product.quantity) , 0)
   
   const addItem = (producto , cantidad) => {
     const productoRepetido = isInCart(producto);
@@ -22,7 +22,6 @@ const CartProvider = ({children}) => {
         setCart([...cart , {...producto , quantity: cantidad}])
       }
     }
-
     const clearAll = () => {
      setCart([])
     }
@@ -36,14 +35,8 @@ const CartProvider = ({children}) => {
       return cart.find(elemento => elemento.id === producto.id)
     }
     
-    const getTotal = () =>{
-      const totaldetodo = cart.reduce((acc, product) => acc + product.price*product.quantity , 0)
-      return <p>totaldetodo</p>
-    }
-   
-    
     return (
-      <CartShop.Provider value={{ getTotal , addItem, cart, clearAll, removeItem, totalQuantities, setTotalQuantities}}>
+      <CartShop.Provider value={{ total, addItem, cart, clearAll, removeItem, totalQuantities, setTotalQuantities, totalPrice}}>
         {children}
     </CartShop.Provider>
   )

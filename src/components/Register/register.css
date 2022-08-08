@@ -1,0 +1,104 @@
+.blackBackground{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+}
+.is-open{
+    display: flex;
+}
+.formContainer {
+    display: relative;
+    width: 800px;
+    height: 600px;
+    background-color: white;
+    border-radius: 5px;
+    border:4px solid black;
+    margin: 20px auto;
+}
+.formLeftSideContainer{
+    width: 40%;
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 50px;
+    margin-top: -20px;;
+}
+.inputContainer label {
+    color: var(--blue);
+}
+.formInput {
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 2em;
+    border: none;
+    background-color: #E1D4A7;
+    border-radius: 2px;
+    outline: none;
+}
+.formInput:focus {
+    border-bottom: 2px solid #a09775;
+}
+.formErrorMessage{
+    display: inline;
+    position: relative;
+    margin: 0;
+}
+.formBtnContainer {
+    position: fixed;
+    display: flex;
+    align-self: center;
+    margin-top: 150px;
+    margin-left: 750px;
+}
+.formBtnContainer .button{
+    width: 120px;
+    margin: 15px;
+    font-size: 31px;;
+}
+.formBtnContainer .button:hover{
+   cursor: pointer;
+}
+.formErrorMessage {
+    color: brown;
+    margin-bottom: 5px;
+}
+.Xbtn{
+    float: right;
+    background-color:#E1D4A7 ;
+    outline: 2px solid #000;
+}
+.Xbtn:hover{
+    cursor: pointer;
+    background-color: #a09775;
+}
+.formConfirmBtn{
+    width:180px;
+    height: 50px;
+    font-size: 20px;
+    margin: auto;
+    margin-top:20px;
+    margin-left: 45%;
+    background-color: #c09b4b;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+.formConfirmBtn:hover{
+    cursor: pointer;
+    background-color: #777;
+    color: #c09b4b;
+}
+.formConfirmBtn:active{
+    border-right: none;
+    border-bottom: none;
+}

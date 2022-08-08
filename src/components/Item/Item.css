@@ -7,9 +7,7 @@
     display: inline-block;
     width: 210px;
     height: 240px;
-    background-color: #E1D4A7;
-    border: 1.5px solid #333;
-    color: #000;
+    color: rgb(78, 72, 54);
     list-style-type: none;
     border-radius: 4px;
     text-align: center;
@@ -17,8 +15,7 @@
 }
 
 .itemcard:hover {
-    outline: 2.5px solid #F77202;
-    border: 1.5px solid #F77202;
+    outline: 2.5px solid #e4c391;
 }
 
 .cardcount {
@@ -53,9 +50,11 @@
     margin: 20px;
 }
 .detailBtn {
-    background-color: #F77202;
-    color: #fff;
-    font-size: 16px;
+    background-color: #e4c391;
+    color: rgb(105, 91, 74);
+    font-size: 20px;
+    height:40px;
+    width: 85px;
     padding-right: 64px;
     margin-left: 0px;
     text-align: center;
@@ -67,14 +66,14 @@
     margin-left: 8px;
     text-align: center;
     text-decoration: none;
-    color: #fff;
+    color: rgb(105, 91, 74);
 }
 .detailBtn:hover {
     cursor: pointer;
 }
 .detailBtn:active {
-    background-color: #c30;
-    color: #fff;
+    background-color: rgb(187, 127, 48);
+    color: rgb(105, 91, 74);
 }
 .middle {
     transition: .5s ease;

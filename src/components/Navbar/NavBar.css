@@ -1,6 +1,6 @@
 .linavbar {
     display: inline-block;
-    height: 50px;
+    height: 80px;
     width: 100%;
     background-color: #E1D4A7;
     list-style-type: none;
@@ -10,7 +10,7 @@
 }
 
 .linavbar li{
-    margin-top: 14px;
+    margin-top: 28px;
     margin-right: 5px;
     float: right;
     border-right: 2px solid #999;
@@ -19,7 +19,7 @@
  button.li{
     width: 60px;
     height: 30px;
-    margin-top: 14px;
+    margin-top: 25px;
     margin-right: 5px;
     float: right;
     list-style-type: none;
@@ -48,26 +48,21 @@ div.cart{
     font-family: fantasy;
     background-color: transparent;
     font-size: 40px;
-    color: #F77202 ;
+    color: rgb(78, 72, 54) ;
     display: inline-block;
     margin: 0;
-    text-shadow: 3px 2px 10px #000;
     margin-left: 10px;
 }
 
 .logo a {
-    font-family: fantasy;
+    font-family: 'Trebuchet MS';
     background-color: transparent;
     font-size: 40px;
-    color: #F77202 ;
+    color: rgb(117, 96, 33) ;
     display: inline-block;
     margin: 0;
-    text-shadow: 3px 2px 10px #000;
+    text-shadow: 1px 1px 4px rgb(128, 115, 60);
     margin-left: 10px;
+    margin-top: 15px;
     text-decoration: none;
 }
-
-/* Link {
-    text-decoration: none;
-    color: #F77202;
-} */
